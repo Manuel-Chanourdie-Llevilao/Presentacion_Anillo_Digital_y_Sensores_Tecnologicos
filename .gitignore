@@ -1,0 +1,16 @@
+# Ignorar temporales y sistema
+Thumbs.db
+.DS_Store
+*.tmp
+*.log
+
+# NOTA (2026-09-03): Los escudos 01.png, 02.png, 03.png YA NO se encuentran
+# en 01. Presentacion/imagenes/ — se revierte la excepción anterior.
+# Ahora están en 01. Presentacion/ (raíz): 01.png, 02.png, 03.png
+!01. Presentacion/01.png
+!01. Presentacion/02.png
+!01. Presentacion/03.png
+!01. Presentacion/*.html
+!01. Presentacion/*.css
+!01. Presentacion/*.js
+!01. Presentacion/.gitattributes
