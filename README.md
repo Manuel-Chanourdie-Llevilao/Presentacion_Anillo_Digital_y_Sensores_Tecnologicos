@@ -1,223 +1,161 @@
-# División Anillo Digital - Presentación 2026 📊
+﻿# División Anillo Digital — Presentación 2026
 
-Presentación HTML profesional de la División Anillo Digital de la Policía de la Ciudad con información operativa 2026.
+Presentación institucional interactiva de la **Superintendencia de Prevención y Gestión de Emergencias — Dirección Videoseguridad — Departamento Coordinación Operativa**. Vista única circular (hub) con dos divisiones: **Anillo Digital (04)** y **Sensores Tecnológicos (06)**.
 
-## 📋 Descripción
-
-Presentación de 5 diapositivas (slides) con:
-- **Diapositiva 1:** Portada con 3 escudos institucionales (DAD, Policía, SIPGE)
-- **Diapositiva 2:** Capacidades Operativas (Infraestructura y Funciones)
-- **Diapositiva 3:** Resultados Operativos con Gráficos (Procedimientos y Alarmas)
-- **Diapositiva 4:** Análisis Detallado con Tablas de Comparación 2025 vs 2026
-- **Diapositiva 5:** Conclusiones y Logros
-
-## 🎨 Características Técnicas
-
-- **Diseño Responsivo:** Aspect ratio 16:9 adaptable a diferentes pantallas
-- **Colores Corporativos:**
-  - Azul Principal: `#2373aa`
-  - Gris: `#b8b8b8`
-  - Negro: `#06090a`
-- **Gráficos Interactivos:** Chart.js para visualización de datos
-- **Animaciones Fluidas:** Transiciones CSS3 y efectos hover
-- **Tipografía:** Google Fonts - Poppins (300, 400, 600, 700)
-- **Sin dependencias externas:** HTML5, CSS3, JavaScript vanilla + Chart.js
-
-## 🚀 Requisitos
-
-- Navegador moderno (Chrome, Firefox, Edge, Safari)
-- Conexión a internet (para CDN de Chart.js y Google Fonts)
-- Acceso a las imágenes locales (rutas configuradas en Windows)
-
-## 📁 Estructura de Archivos
-
-```
-presentacion_anillo_digital.html  (Archivo principal - Todo en uno)
-README.md                          (Este archivo)
-```
-
-### Rutas de Imágenes Utilizadas
-
-Las imágenes están alojadas en:
-```
-C:\Users\chanu\OneDrive\02-Sistema de Gestion de Calidad\Datos\2024\Imagenes\
-```
-
-**Archivos necesarios:**
-- `Escudo Dorado.jpeg` - Escudo DAD
-- `01. Escudo nuevo policia de la ciudad recortado.png` - Escudo Policía
-- `SIPGE.png` - Escudo Superintendencia
-
-## 💻 Instalación y Uso
-
-### Opción 1: Uso Local (Recomendado)
-
-1. Descarga el archivo `presentacion_anillo_digital.html`
-2. Colócalo en cualquier carpeta de tu computadora
-3. Haz doble clic para abrir en tu navegador
-4. ¡Listo! La presentación se abrirá automáticamente
-
-### Opción 2: Usar con Servidor Local (Para mejor rendimiento)
-
-```bash
-# Con Python 3
-python -m http.server 8000
-
-# Con Python 2
-python -m SimpleHTTPServer 8000
-
-# Con Node.js (instala http-server primero)
-npx http-server
-```
-
-Luego abre: `http://localhost:8000/presentacion_anillo_digital.html`
-
-### Opción 3: Publicar en Línea
-
-Puedes subir el archivo a:
-- GitHub Pages
-- Netlify
-- Vercel
-- Cualquier hosting web
-
-## ⌨️ Navegación
-
-### Controles de Teclado
-- **Flecha Derecha (→)** o **Spacebar**: Siguiente diapositiva
-- **Flecha Izquierda (←)**: Diapositiva anterior
-
-### Controles del Ratón
-- **Botón "Siguiente →"**: Avanza a la siguiente diapositiva
-- **Botón "← Anterior"**: Retrocede a la diapositiva anterior
-  - *Nota: Se oculta automáticamente en la Diapositiva 1*
-  - *Nota: "Siguiente" se oculta automáticamente en la Diapositiva 5*
-
-### Indicador
-- Muestra: "Diapositiva X de 5"
-
-## 📊 Contenido de Diapositivas
-
-### Diapositiva 1: Portada
-- 3 Escudos institucionales (180x180px cada uno)
-- Título: "DIVISIÓN ANILLO DIGITAL"
-- Subtítulo y detalles de departamento
-- Año: 2026
-
-### Diapositiva 2: Capacidades Operativas
-**Columna Izquierda - Infraestructura:**
-- 75 Cámaras de Videovigilancia
-- 886 Lectores ANPR/LPR
-- 43 Rodados Operativos
-- 254 Personal Capacitado
-
-**Columna Derecha - Funciones:**
-- 5 Funciones principales con emojis
-- Certificación ISO 9001:2015
-
-### Diapositiva 3: Resultados Operativos
-**Gráfico 1 (Izquierda):** Procedimientos Realizados
-- Procedimiento de Interceptación
-- Procedimiento de Aprehensión
-- Actuaciones GAP
-
-**Gráfico 2 (Derecha):** Alarmas Atendidas
-- Datos 2025 vs 2026
-- Visualización comparativa
-
-### Diapositiva 4: Análisis Detallado
-**Tabla 1:** Procedimientos Realizados
-- Interceptaciones: ↑23.5%
-- Aprehendidos: ↑8.3%
-- Actuaciones GAP: ↑82.4%
-
-**Tabla 2:** Alarmas
-- Alarmas Atendidas: ↑163.8% ⭐
-
-### Diapositiva 5: Conclusiones y Logros
-**Hitos Operativos Destacados (4 items)**
-**Impacto Operacional (4 items)**
-**Caja de Resumen** con conclusión general
-
-## 🔧 Personalización
-
-### Cambiar Colores Corporativos
-
-En el archivo HTML, busca la sección `<style>` y modifica:
-
-```css
-/* Colores actuales */
---color-primary: #2373aa;    /* Azul principal */
---color-secondary: #267ca2;  /* Azul secundario */
---color-gray: #b8b8b8;       /* Gris */
---color-dark: #06090a;       /* Negro */
---color-dark-medium: #5d5d5d; /* Gris oscuro */
-```
-
-### Cambiar Imágenes
-
-Localiza las líneas con etiquetas `<img>` y reemplaza las rutas:
-
-```html
-<img src="NUEVA_RUTA_AQUI" alt="Descripción" class="escudo">
-```
-
-### Modificar Contenido
-
-Busca los títulos y textos en el HTML y edita directamente. Los estilos se aplicarán automáticamente.
-
-## 📈 Mejoras Implementadas (Versión 2026)
-
-✅ 3 escudos institucionales en portada
-✅ Sin barras de desplazamiento (contenido ajustado a pantalla)
-✅ Botones de navegación contextuales (se ocultan en extremos)
-✅ Gráficos interactivos con Chart.js
-✅ Diseño responsivo para múltiples resoluciones
-✅ Animaciones suaves y profesionales
-✅ Tablas de datos 2025 vs 2026
-✅ Énfasis en resultados positivos
-✅ Tipografía profesional con Google Fonts
-
-## 🐛 Solución de Problemas
-
-### Las imágenes no cargan
-**Solución:** Verifica que las rutas a los archivos sean correctas. En Windows, debes usar `/` en lugar de `\` en las URLs de archivo.
-
-### La presentación se ve pequeña
-**Solución:** Presiona `Ctrl + +` en tu navegador para ampliar (o `Cmd + +` en Mac)
-
-### Los gráficos no aparecen
-**Solución:** Asegúrate de tener conexión a internet (se carga Chart.js desde CDN)
-
-### Animaciones muy lentas
-**Solución:** Tu navegador puede estar usando recursos limitados. Cierra otras pestañas.
-
-## 📱 Compatibilidad
-
-| Navegador | Soporte |
-|-----------|---------|
-| Chrome    | ✅ Completo |
-| Firefox   | ✅ Completo |
-| Edge      | ✅ Completo |
-| Safari    | ✅ Completo |
-| Internet Explorer | ❌ No soportado |
-
-## 📄 Licencia
-
-Este proyecto es de uso interno para la División Anillo Digital - Policía de la Ciudad.
-
-## 👤 Autor
-
-División Anillo Digital
-Departamento Coordinación Operativa
-Superintendencia Prevención y Gestión de Emergencias
-
-## 📞 Contacto y Soporte
-
-Para reportar problemas o solicitar cambios, contacta al equipo de la División Anillo Digital.
+> **Demo en vivo (GitHub Pages):** https://manuel-chanourdie-llevilao.github.io/Presentacion_Anillo_Digital/
 
 ---
 
-**Última actualización:** Septiembre 2026
-**Versión:** 2.0
-**Estado:** ✅ Producción
+## 1. Qué contiene
 
+- **Hub circular animado:** escudo central (01.png) que despliega dos satélites (04.png y 06.jpeg).
+- **Panel 04 — División Anillo Digital:** capacidades, tabla Resultados 2025 vs 2026 (ENE–AGO) y dos gráficos comparativos con totales visibles sobre cada barra.
+- **Panel 06 — División Sensores Tecnológicos:** fuerza efectiva, dependencia, tabla Resultados 2025 vs 2026 y dos gráficos (Pulseras y Tobilleras / Dispositivos Antipánico).
+- **Diseño 100% responsive** (320px → 4K) y sin dependencias de build.
+
+---
+
+## 2. Estructura de archivos
+
+\\\
+01. Presentacion DCO/
+├── index.html              # Presentación completa (HTML + CSS + JS en un solo archivo)
+├── 01.png                  # Escudo central — Anillo Digital
+├── 02.png                  # Escudo SIPGE (intro del hub)
+├── 03.png                  # Recurso adicional
+├── 04.png                  # Escudo División Anillo Digital
+├── 05.webp                 # Recurso adicional
+├── 06.jpeg                 # Escudo División Sensores Tecnológicos
+├── .nojekyll               # Evita que GitHub Pages ignore archivos con _
+├── .gitignore              # Ignora temporales (Thumbs.db, *.log, body_*.json)
+├── .gitattributes          # Imágenes como binary, texto con eol=lf
+├── README.md               # Este archivo
+├── GITHUB_PUBLICACION.md   # Paso a paso para publicar/actualizar en GitHub
+├── GUIA_COMPLETA.md        # Guía completa del proyecto
+├── INSTRUCCIONES.md        # Manual de uso para usuarios no técnicos
+└── LICENSE                 # Apache 2.0
+\\\
+
+> **Nota:** todas las imágenes se referencian con rutas relativas (\./01.png\) para que funcionen tanto en local como en GitHub Pages.
+
+---
+
+## 3. Paleta de colores y estilo
+
+### Paleta corporativa
+
+| Uso | Color | Código |
+|-----|-------|--------|
+| Azul principal (títulos, bordes) | Azul DAD | \#2373aa\ |
+| Azul secundario (acentos) | Azul medio | \#267ca2\ |
+| Azul claro (subtítulos, highlights) | Celeste | \#7dc1e5\ |
+| Texto principal | Gris claro | \#b8b8b8\ |
+| Texto secundario / footer | Gris medio | \#5d5d5d\ |
+| Fondo | Negro azulado | \#06090a\ |
+| Éxito / variación positiva | Verde | \#4ade80\ |
+| Variación negativa | Rojo suave | \#f87171\ |
+| Fondo tarjetas | Azul translúcido | \gba(35,115,170,0.07)\ |
+
+### Tipografía y efectos
+
+- **Fuente:** \Poppins\ (Google Fonts, pesos 300/400/600/700) + fallback \Segoe UI\.
+- **Fondo:** degradado \#06090a → #1a1d20 → #0f1214\ + radiales sutiles.
+- **Tarjetas:** \detail-card\ con borde \gba(35,115,170,0.22)\, radio 10px.
+- **Tablas:** \mini-table\ con cabecera \gba(35,115,170,0.12)\.
+- **Gráficos:** Chart.js (barras) + plugin propio \hubBarLabelsPlugin\ que dibuja el total sobre cada barra, fuera de la misma, siempre visible.
+- **Animaciones:** \pulseGlow\ en círculo central, \loatA/B\ en satélites, \hintPulse\ en pista de interacción. Respeta \prefers-reduced-motion\.
+
+---
+
+## 4. Tecnologías
+
+- HTML5 + CSS3 (Grid/Flex, clamp, aspect-ratio, custom properties)
+- JavaScript vanilla (sin framework)
+- Chart.js vía CDN (\https://cdn.jsdelivr.net/npm/chart.js\)
+- Google Fonts (Poppins)
+
+Sin paso de build: basta abrir \index.html\.
+
+---
+
+## 5. Uso local
+
+1. Clonar o descargar el repositorio.
+2. Doble clic en \index.html\ o servir con un servidor estático:
+
+\\\powershell
+# Python
+python -m http.server 8000
+# Node
+npx http-server
+\\\
+
+3. Abrir \http://localhost:8000\.
+
+**Navegación:** clic en el escudo central → elegir satélite (04/06) → \Volver\ o \Esc\ para regresar. Accesible por teclado (Enter/Espacio).
+
+---
+
+## 6. Cómo actualizar datos
+
+### División Anillo Digital (04)
+
+- **Capacidades Operativas:** en \#detail04\ → primer \.detail-card\ (lista \ul\).
+- **Tabla Resultados:** en \#detail04\ → \.mini-table\ (variaciones con clases \adge-up\/\adge-down\).
+- **Gráficos:** en \initHubCharts()\ → datasets de \hubChartProcedimientos\ y \hubChartAlarmas\. Los totales se dibujan automáticamente por \hubBarLabelsPlugin\.
+
+### División Sensores Tecnológicos (06)
+
+- **Fuerza Efectiva:** en \#detail06\ → primer \.detail-card\ (\Fuerza Efectiva: 104 efectivos\).
+- **Tabla Resultados:** en \#detail06\ → \.mini-table\.
+- **Gráficos:** en \initSensoresCharts()\ → \hubChartPulseras\ (Alertas/Detenidos) y \hubChartAntipanico\ (Accionamiento/Detenidos).
+
+> Tras editar \index.html\, recargar con \Ctrl+F5\ para invalidar caché.
+
+---
+
+## 7. Flujo Git / GitHub (sin fricción)
+
+El repositorio ya está conectado a **GitHub Pages** (\main\ → \/\).
+
+\\\powershell
+# Ver estado
+git status
+
+# Guardar cambios
+git add index.html
+git commit -m "feat: descripción clara del cambio"
+
+# Publicar (usa el credential manager de Windows, sin token en la URL)
+git push origin main
+\\\
+
+- **Remote:** \https://github.com/Manuel-Chanourdie-Llevilao/Presentacion_Anillo_Digital.git\
+- **Branch:** \main\
+- **Pages:** https://manuel-chanourdie-llevilao.github.io/Presentacion_Anillo_Digital/ (deploy automático en 1–2 min tras cada push)
+- **.gitignore:** solo temporales; imágenes y HTML nunca se ignoran.
+- **.gitattributes:** imágenes como \inary\, texto con \eol=lf\.
+- **.nojekyll:** evita que Pages ignore archivos que empiezan con \_\.
+
+Si \git push\ pide credenciales, usar el **Personal Access Token (classic)** con scope \epo\ como password (el helper \manager\ lo guarda).
+
+---
+
+## 8. Historial relevante
+
+| Fecha | Cambio |
+|-------|--------|
+| 2026-09-08 | Hub circular, paneles 04/06 con tablas y gráficos comparativos 2025–2026, totales sobre barras, sanitización de credenciales y docs actualizados |
+| 2026-09-03 | Migración de escudos a raíz, corrección de rutas relativas |
+| 2026-08 | Versión inicial 5 slides clásica |
+
+---
+
+## 9. Licencia y autoría
+
+- **Licencia:** Apache 2.0 (ver \LICENSE\).
+- **Autor:** División Anillo Digital — Departamento Coordinación Operativa — Superintendencia Prevención y Gestión de Emergencias — Policía de la Ciudad.
+
+---
+
+**Última actualización:** 2026-09-08 · **Estado:** Producción · **Branch:** main
