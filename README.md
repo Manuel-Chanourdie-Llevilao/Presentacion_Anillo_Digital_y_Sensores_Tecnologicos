@@ -1,8 +1,8 @@
-﻿# División Anillo Digital — Presentación 2026
+﻿# División Anillo Digital y Sensores Tecnológicos — Presentación 2026
 
 Presentación institucional interactiva de la **Superintendencia de Prevención y Gestión de Emergencias — Dirección Videoseguridad — Departamento Coordinación Operativa**. Vista única circular (hub) con dos divisiones: **Anillo Digital (04)** y **Sensores Tecnológicos (06)**.
 
-> **Demo en vivo (GitHub Pages):** https://manuel-chanourdie-llevilao.github.io/Presentacion_Anillo_Digital/
+> **Demo en vivo (GitHub Pages):** https://manuel-chanourdie-llevilao.github.io/Presentacion_Anillo_Digital_y_Sensores_Tecnologicos/
 
 ---
 
@@ -130,9 +130,9 @@ git commit -m "feat: descripción clara del cambio"
 git push origin main
 \\\
 
-- **Remote:** \https://github.com/Manuel-Chanourdie-Llevilao/Presentacion_Anillo_Digital.git\
+- **Remote:** \https://github.com/Manuel-Chanourdie-Llevilao/Presentacion_Anillo_Digital_y_Sensores_Tecnologicos.git\
 - **Branch:** \main\
-- **Pages:** https://manuel-chanourdie-llevilao.github.io/Presentacion_Anillo_Digital/ (deploy automático en 1–2 min tras cada push)
+- **Pages:** https://manuel-chanourdie-llevilao.github.io/Presentacion_Anillo_Digital_y_Sensores_Tecnologicos/ (deploy automático en 1–2 min tras cada push)
 - **.gitignore:** solo temporales; imágenes y HTML nunca se ignoran.
 - **.gitattributes:** imágenes como \inary\, texto con \eol=lf\.
 - **.nojekyll:** evita que Pages ignore archivos que empiezan con \_\.
@@ -159,3 +159,4 @@ Si \git push\ pide credenciales, usar el **Personal Access Token (classic)** con
 ---
 
 **Última actualización:** 2026-09-08 · **Estado:** Producción · **Branch:** main
+

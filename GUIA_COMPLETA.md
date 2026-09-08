@@ -1,7 +1,7 @@
 ﻿# 📦 Guía Completa — División Anillo Digital 2026
 
 > **Presentación institucional interactiva** — Superintendencia de Prevención y Gestión de Emergencias · Dirección Videoseguridad · Departamento Coordinación Operativa  
-> **Demo:** https://manuel-chanourdie-llevilao.github.io/Presentacion_Anillo_Digital/ · **Repo:** \Manuel-Chanourdie-Llevilao/Presentacion_Anillo_Digital\ · **Branch:** \main\
+> **Demo:** https://manuel-chanourdie-llevilao.github.io/Presentacion_Anillo_Digital_y_Sensores_Tecnologicos/ · **Repo:** \Manuel-Chanourdie-Llevilao/Presentacion_Anillo_Digital_y_Sensores_Tecnologicos\ · **Branch:** \main\
 
 ---
 
@@ -141,9 +141,9 @@ git commit -m "feat: descripción clara"
 git push origin main
 \\\
 
-- **Remote:** \https://github.com/Manuel-Chanourdie-Llevilao/Presentacion_Anillo_Digital.git\ (sin token en URL)
+- **Remote:** \https://github.com/Manuel-Chanourdie-Llevilao/Presentacion_Anillo_Digital_y_Sensores_Tecnologicos.git\ (sin token en URL)
 - **Credential helper:** \manager\ (Windows) guarda el PAT.
-- **Pages:** deploy automático 1–2 min en https://manuel-chanourdie-llevilao.github.io/Presentacion_Anillo_Digital/
+- **Pages:** deploy automático 1–2 min en https://manuel-chanourdie-llevilao.github.io/Presentacion_Anillo_Digital_y_Sensores_Tecnologicos/
 - **Verificación:** \git check-ignore -v 01.png\ debe dar vacío; \git ls-files\ lista versionados.
 
 Si pide password, usar **PAT classic** scope \epo\.
@@ -172,3 +172,4 @@ Si pide password, usar **PAT classic** scope \epo\.
 ---
 
 **Última actualización:** 2026-09-08 · **Estado:** Producción
+
