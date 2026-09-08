@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,20 +33,6 @@
 
         .slide {
             display: none;
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            padding: 40px 60px;
-            background: linear-gradient(135deg, #06090a 0%, #1a1d20 50%, #0f1214 100%);
-            border: 2px solid #2373aa;
-            position: relative;
-            overflow: hidden;
-            animation: slideIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-            box-shadow: 0 20px 60px rgba(35, 115, 170, 0.2), inset 0 1px 0 rgba(184, 184, 184, 0.1);
-        }
-
-        .slide.active {
-            display: flex;
-            flex-direction: column;
         }
 
         @keyframes slideIn {
@@ -53,6 +40,7 @@
                 opacity: 0;
                 transform: translateX(50px) rotateY(-10deg);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0) rotateY(0);
@@ -67,7 +55,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: 
+            background-image:
                 radial-gradient(circle at 20% 50%, rgba(35, 115, 170, 0.08) 0%, transparent 50%),
                 radial-gradient(circle at 80% 80%, rgba(38, 124, 162, 0.08) 0%, transparent 50%);
             pointer-events: none;
@@ -114,13 +102,13 @@
             height: clamp(68px, 9vw, 110px);
             width: auto;
             object-fit: contain;
-            filter: drop-shadow(0 4px 14px rgba(35, 115, 170, 0.4)) drop-shadow(0 2px 6px rgba(0,0,0,0.4));
+            filter: drop-shadow(0 4px 14px rgba(35, 115, 170, 0.4)) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
             transition: transform 0.3s ease, filter 0.3s ease;
         }
 
         .escudo:hover {
             transform: translateY(-4px) scale(1.04);
-            filter: drop-shadow(0 8px 20px rgba(35, 115, 170, 0.55)) drop-shadow(0 4px 10px rgba(0,0,0,0.5));
+            filter: drop-shadow(0 8px 20px rgba(35, 115, 170, 0.55)) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
         }
 
         .escudo-02 {
@@ -128,9 +116,18 @@
         }
 
         @media (max-width: 430px) {
-            .escudos-container { gap: 14px; margin-bottom: 16px; }
-            .escudo { height: 58px; }
-            .escudo-02 { height: 66px; }
+            .escudos-container {
+                gap: 14px;
+                margin-bottom: 16px;
+            }
+
+            .escudo {
+                height: 58px;
+            }
+
+            .escudo-02 {
+                height: 66px;
+            }
         }
 
         .slide-1 h1 {
@@ -152,6 +149,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -323,7 +321,8 @@
             border-radius: 8px;
         }
 
-        .btn-anterior, .btn-siguiente {
+        .btn-anterior,
+        .btn-siguiente {
             visibility: visible;
         }
 
@@ -412,6 +411,7 @@
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
         }
+
         table {
             min-width: 480px;
         }
@@ -423,9 +423,11 @@
                 align-items: flex-start;
                 min-height: auto;
             }
+
             .presentation-container {
                 max-width: 100%;
             }
+
             .slide {
                 padding: 16px 12px;
                 aspect-ratio: auto;
@@ -433,73 +435,93 @@
                 height: auto;
                 overflow: visible;
             }
+
             .slide-content {
                 height: auto;
                 overflow: visible;
                 justify-content: flex-start;
                 gap: 12px;
             }
+
             .slide-1 h1 {
                 font-size: 22px !important;
                 line-height: 1.15;
                 letter-spacing: 1px;
             }
+
             .slide-1 .subtitulo {
                 font-size: 13px !important;
             }
+
             .slide-1 .departamento {
                 font-size: 10px !important;
                 line-height: 1.4;
             }
-            .slide-2 h2, .slide-3 h2, .slide-4 h2, .slide-5 h2 {
+
+            .slide-2 h2,
+            .slide-3 h2,
+            .slide-4 h2,
+            .slide-5 h2 {
                 font-size: 18px !important;
                 margin-bottom: 12px;
                 padding-bottom: 8px;
             }
+
             .content-2col {
                 grid-template-columns: 1fr !important;
                 gap: 14px;
                 height: auto;
             }
+
             .slide-3 div[style*="grid-template-columns: 1fr 1fr"],
             .slide-5 div[style*="grid-template-columns: 1fr 1fr"] {
                 grid-template-columns: 1fr !important;
                 gap: 14px !important;
             }
+
             .content-column h3 {
                 font-size: 12px !important;
             }
+
             .content-column li {
                 font-size: 11px !important;
                 line-height: 1.35 !important;
             }
+
             .content-column p {
                 font-size: 11px !important;
             }
+
             table {
                 font-size: 9px !important;
                 min-width: 420px;
             }
-            thead th, tbody td {
+
+            thead th,
+            tbody td {
                 padding: 5px 4px !important;
                 font-size: 9px !important;
             }
+
             .controls {
                 gap: 8px;
                 padding: 10px 8px;
                 flex-wrap: wrap;
             }
+
             button {
                 padding: 8px 12px !important;
                 font-size: 11px !important;
                 flex: 1 1 auto;
             }
+
             .slide-indicator {
                 font-size: 11px !important;
                 width: 100%;
                 text-align: center;
                 order: -1;
             }
+
             canvas {
                 max-height: 180px !important;
             }
@@ -511,9 +533,11 @@
                 padding: 8px;
                 align-items: flex-start;
             }
+
             .presentation-container {
                 max-width: 100%;
             }
+
             .slide {
                 padding: 18px 14px;
                 aspect-ratio: auto;
@@ -521,43 +545,58 @@
                 height: auto;
                 overflow: visible;
             }
+
             .slide-content {
                 height: auto;
                 overflow: visible;
                 gap: 14px;
             }
+
             .slide-1 h1 {
                 font-size: 26px !important;
                 letter-spacing: 1px;
             }
+
             .slide-1 .subtitulo {
                 font-size: 14px !important;
             }
+
             .slide-1 .departamento {
                 font-size: 11px !important;
             }
-            .slide-2 h2, .slide-3 h2, .slide-4 h2, .slide-5 h2 {
+
+            .slide-2 h2,
+            .slide-3 h2,
+            .slide-4 h2,
+            .slide-5 h2 {
                 font-size: 20px !important;
             }
+
             .content-2col {
                 grid-template-columns: 1fr !important;
                 gap: 16px;
                 height: auto;
             }
+
             .slide-3 div[style*="grid-template-columns: 1fr 1fr"],
             .slide-5 div[style*="grid-template-columns: 1fr 1fr"] {
                 grid-template-columns: 1fr !important;
             }
+
             table {
                 font-size: 9.5px !important;
             }
-            thead th, tbody td {
+
+            thead th,
+            tbody td {
                 padding: 6px 5px !important;
             }
+
             button {
                 padding: 9px 14px !important;
                 font-size: 12px !important;
             }
+
             canvas {
                 max-height: 200px !important;
             }
@@ -569,9 +608,11 @@
                 padding: 10px;
                 align-items: flex-start;
             }
+
             .presentation-container {
                 max-width: 100%;
             }
+
             .slide {
                 padding: 22px 18px;
                 aspect-ratio: auto;
@@ -579,23 +620,32 @@
                 height: auto;
                 overflow: visible;
             }
+
             .slide-content {
                 height: auto;
                 overflow: visible;
             }
+
             .slide-1 h1 {
                 font-size: 30px !important;
             }
+
             .slide-1 .subtitulo {
                 font-size: 16px !important;
             }
-            .slide-2 h2, .slide-3 h2, .slide-4 h2, .slide-5 h2 {
+
+            .slide-2 h2,
+            .slide-3 h2,
+            .slide-4 h2,
+            .slide-5 h2 {
                 font-size: 24px !important;
             }
+
             .content-2col {
                 grid-template-columns: 1fr !important;
                 height: auto;
             }
+
             .slide-3 div[style*="grid-template-columns: 1fr 1fr"],
             .slide-5 div[style*="grid-template-columns: 1fr 1fr"] {
                 grid-template-columns: 1fr !important;
@@ -607,9 +657,11 @@
             body {
                 padding: 14px;
             }
+
             .presentation-container {
                 max-width: 96%;
             }
+
             .slide {
                 padding: 28px 26px;
                 aspect-ratio: auto;
@@ -617,31 +669,42 @@
                 height: auto;
                 overflow: visible;
             }
+
             .slide-content {
                 height: auto;
                 overflow: visible;
             }
+
             .slide-1 h1 {
                 font-size: clamp(32px, 4vw, 42px) !important;
             }
+
             .slide-1 .subtitulo {
                 font-size: clamp(16px, 2.2vw, 20px) !important;
             }
-            .slide-2 h2, .slide-3 h2, .slide-4 h2, .slide-5 h2 {
+
+            .slide-2 h2,
+            .slide-3 h2,
+            .slide-4 h2,
+            .slide-5 h2 {
                 font-size: clamp(26px, 3vw, 32px) !important;
             }
+
             .content-2col {
                 grid-template-columns: 1fr 1fr;
                 gap: 20px;
                 height: auto;
             }
+
             table {
                 font-size: 10px !important;
             }
+
             .controls {
                 gap: 10px;
                 padding: 14px 12px;
             }
+
             button {
                 padding: 10px 18px !important;
                 font-size: 13px !important;
@@ -653,17 +716,24 @@
             .presentation-container {
                 max-width: 1000px;
             }
+
             .slide {
                 padding: 36px 48px;
                 aspect-ratio: 16 / 9;
             }
+
             .slide-1 h1 {
                 font-size: 48px;
             }
+
             .slide-1 .subtitulo {
                 font-size: 22px;
             }
-            .slide-2 h2, .slide-3 h2, .slide-4 h2, .slide-5 h2 {
+
+            .slide-2 h2,
+            .slide-3 h2,
+            .slide-4 h2,
+            .slide-5 h2 {
                 font-size: 36px;
             }
         }
@@ -673,32 +743,45 @@
             body {
                 padding: 24px;
             }
+
             .presentation-container {
                 max-width: 1100px;
             }
+
             .slide {
                 padding: 44px 64px;
                 aspect-ratio: 16 / 9;
             }
+
             .slide-1 h1 {
                 font-size: 58px;
             }
+
             .slide-1 .subtitulo {
                 font-size: 26px;
             }
-            .slide-2 h2, .slide-3 h2, .slide-4 h2, .slide-5 h2 {
+
+            .slide-2 h2,
+            .slide-3 h2,
+            .slide-4 h2,
+            .slide-5 h2 {
                 font-size: 42px;
             }
+
             .content-column li {
                 font-size: 14px;
             }
+
             .content-column p {
                 font-size: 13px;
             }
+
             table {
                 font-size: 12px;
             }
-            thead th, tbody td {
+
+            thead th,
+            tbody td {
                 padding: 8px 8px;
                 font-size: 12px;
             }
@@ -709,28 +792,39 @@
             body {
                 padding: 28px;
             }
+
             .presentation-container {
                 max-width: 1250px;
             }
+
             .slide {
                 padding: 50px 72px;
                 aspect-ratio: 16 / 9;
             }
+
             .slide-1 h1 {
                 font-size: 62px;
             }
+
             .slide-1 .subtitulo {
                 font-size: 28px;
             }
-            .slide-2 h2, .slide-3 h2, .slide-4 h2, .slide-5 h2 {
+
+            .slide-2 h2,
+            .slide-3 h2,
+            .slide-4 h2,
+            .slide-5 h2 {
                 font-size: 46px;
             }
+
             .content-column li {
                 font-size: 15px;
             }
+
             .content-column p {
                 font-size: 14px;
             }
+
             table {
                 font-size: 13px;
             }
@@ -741,39 +835,54 @@
             body {
                 padding: 32px;
             }
+
             .presentation-container {
                 max-width: 1400px;
             }
+
             .slide {
                 padding: 56px 80px;
                 aspect-ratio: 16 / 9;
                 border-width: 3px;
             }
+
             .slide-1 h1 {
                 font-size: 68px;
             }
+
             .slide-1 .subtitulo {
                 font-size: 30px;
             }
-            .slide-2 h2, .slide-3 h2, .slide-4 h2, .slide-5 h2 {
+
+            .slide-2 h2,
+            .slide-3 h2,
+            .slide-4 h2,
+            .slide-5 h2 {
                 font-size: 50px;
             }
+
             .content-column h3 {
                 font-size: 18px;
             }
+
             .content-column li {
                 font-size: 16px;
             }
+
             .content-column p {
                 font-size: 15px;
             }
+
             table {
                 font-size: 14px;
             }
-            thead th, tbody td {
+
+            thead th,
+            tbody td {
                 padding: 10px 10px;
                 font-size: 14px;
             }
+
             button {
                 padding: 14px 32px;
                 font-size: 16px;
@@ -797,6 +906,715 @@
             }
         }
 
+        /* ========== NUEVO SISTEMA CIRCULO ANIMADO ========== */
+        .hub-view {
+            display: none;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: linear-gradient(135deg, #06090a 0%, #1a1d20 50%, #0f1214 100%);
+            border: 2px solid #2373aa;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(35, 115, 170, 0.2), inset 0 1px 0 rgba(184, 184, 184, 0.1);
+        }
+
+        .hub-view.active {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hub-view::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle at 20% 50%, rgba(35, 115, 170, 0.08) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(38, 124, 162, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hub-layout {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: 2;
+            overflow: hidden;
+        }
+
+        .hub-layout.has-detail .hub-left {
+            width: 25%;
+        }
+
+        .hub-layout.has-detail .hub-right {
+            padding-left: 4px;
+            justify-content: flex-start;
+            overflow-y: auto;
+            align-items: stretch;
+        }
+        .hub-layout.has-detail .detail-panel.active {
+            height: auto;
+            min-height: 100%;
+        }
+        #hubChartProcedimientos, #hubChartAlarmas, #hubChartSOS {
+            width: 100% !important;
+            height: 180px !important;
+            display: block !important;
+            min-height: 180px;
+            max-height: 180px;
+        }
+        .chart-box {
+            background: rgba(35,115,170,0.08);
+            border: 1px solid rgba(35,115,170,0.22);
+            border-radius: 8px;
+            padding: 10px 8px 8px;
+            min-height: 210px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .chart-box canvas {
+            flex: 1;
+            width: 100% !important;
+        }
+        /* En vista detalle solo queda el círculo seleccionado, sin burbujas satélite */
+        .hub-layout.has-detail .satellite { display: none !important; }
+        .hub-layout.has-detail .circle-main { cursor: pointer; }
+
+        .hub-layout.has-detail .circle-main {
+            width: clamp(150px, 16vw, 260px);
+            height: clamp(150px, 16vw, 260px);
+        }
+
+        .hub-layout.has-detail .circle-main.shifted {
+            left: -42%;
+            opacity: 0.92;
+        }
+
+        .hub-left {
+            width: 46%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            flex-shrink: 0;
+            transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .circle-main {
+            width: clamp(240px, 30vw, 440px);
+            height: clamp(240px, 30vw, 440px);
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #1e3a4f 0%, #0f1e2e 40%, #06090a 100%);
+            border: 3px solid #2373aa;
+            position: relative;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: left 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.4s ease, box-shadow 0.4s ease;
+            overflow: hidden;
+            box-shadow: 0 0 50px rgba(35, 115, 170, 0.45), inset 0 0 40px rgba(35, 115, 170, 0.15), 0 20px 60px rgba(0, 0, 0, 0.6);
+            animation: pulseGlow 3s ease-in-out infinite;
+            will-change: transform;
+            contain: layout paint;
+        }
+
+        .circle-main.shifted {
+            left: -22%;
+        }
+
+        .circle-main::before {
+            content: '';
+            position: absolute;
+            inset: -3px;
+            border-radius: 50%;
+            padding: 3px;
+            background: conic-gradient(from 0deg, #2373aa, #267ca2, #7dc1e5, #2373aa);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            animation: rotateBorder 4s linear infinite;
+            opacity: 0.9;
+        }
+
+        @keyframes rotateBorder {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes pulseGlow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 50px rgba(35, 115, 170, 0.45), inset 0 0 40px rgba(35, 115, 170, 0.15)
+            }
+
+            50% {
+                box-shadow: 0 0 70px rgba(35, 115, 170, 0.7), inset 0 0 50px rgba(35, 115, 170, 0.25)
+            }
+        }
+
+        .circle-main img {
+            width: 72%;
+            height: 72%;
+            object-fit: contain;
+            filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.7));
+            transition: transform 0.4s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .circle-main:hover {
+            transform: scale(1.03);
+        }
+
+        .circle-main:hover img {
+            transform: scale(1.06);
+        }
+
+        .circle-main:active {
+            transform: scale(0.98);
+        }
+
+        .circle-label {
+            position: absolute;
+            bottom: 14%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(6, 9, 10, 0.85);
+            border: 1px solid rgba(35, 115, 170, 0.5);
+            color: #7dc1e5;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 20px;
+            white-space: nowrap;
+            z-index: 2;
+            backdrop-filter: blur(6px);
+        }
+
+        .satellite {
+            position: absolute;
+            width: clamp(92px, 11vw, 150px);
+            height: clamp(92px, 11vw, 150px);
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #1a2e42, #0a1218);
+            border: 2px solid #267ca2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transform: scale(0) translateY(20px);
+            transition: all 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(35, 115, 170, 0.25);
+            overflow: hidden;
+            z-index: 3;
+        }
+
+        .satellite.visible {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+
+        .satellite img {
+            width: 70%;
+            height: 70%;
+            object-fit: contain;
+            transition: transform 0.3s;
+        }
+
+        .satellite:hover {
+            transform: scale(1.1);
+            border-color: #7dc1e5;
+            box-shadow: 0 14px 36px rgba(0, 0, 0, 0.7), 0 0 28px rgba(35, 115, 170, 0.45);
+        }
+
+        .satellite:hover img {
+            transform: scale(1.08);
+        }
+
+        .satellite-04 {
+            top: 10%;
+            right: 6%;
+        }
+
+        .satellite-06 {
+            bottom: 10%;
+            right: 6%;
+        }
+
+        .satellite.visible.satellite-04 {
+            animation: floatA 3s ease-in-out infinite 0.6s;
+        }
+
+        .satellite.visible.satellite-06 {
+            animation: floatB 3s ease-in-out infinite 1s;
+        }
+
+        @keyframes floatA {
+
+            0%,
+            100% {
+                transform: scale(1) translateY(0)
+            }
+
+            50% {
+                transform: scale(1) translateY(-7px)
+            }
+        }
+
+        @keyframes floatB {
+
+            0%,
+            100% {
+                transform: scale(1) translateY(0)
+            }
+
+            50% {
+                transform: scale(1) translateY(-7px)
+            }
+        }
+
+        .satellite-label {
+            position: absolute;
+            bottom: -22px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 9px;
+            font-weight: 700;
+            color: #b8b8b8;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            white-space: nowrap;
+            background: rgba(6, 9, 10, 0.9);
+            padding: 2px 7px;
+            border-radius: 10px;
+            border: 1px solid rgba(93, 93, 93, 0.3);
+        }
+
+        .hub-right {
+            flex: 1;
+            padding: 28px 36px 28px 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+            overflow: hidden;
+            transition: padding 0.5s ease;
+        }
+
+        .hub-intro {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            min-height: 340px;
+            gap: 16px;
+            text-align: center;
+        }
+
+        .hub-intro-main {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            width: 100%;
+        }
+
+        .hub-intro-main h2 {
+            font-size: clamp(18px, 2vw, 28px);
+            color: #2373aa;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 12px rgba(35, 115, 170, 0.35);
+            line-height: 1.15;
+            text-align: center;
+        }
+
+        .hub-intro .hub-sub {
+            font-size: 11px;
+            color: #7dc1e5;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 14px;
+            line-height: 1.4;
+            text-align: center;
+        }
+
+        .hub-intro p {
+            font-size: 12.5px;
+            color: #b8b8b8;
+            line-height: 1.65;
+            max-width: 560px;
+            text-align: center;
+        }
+
+        .hub-escudo-sipge {
+            height: 145px;
+            width: auto;
+            object-fit: contain;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 8px 20px rgba(35, 115, 170, 0.45)) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+            display: block;
+        }
+
+        @media (max-width: 860px) {
+            .hub-escudo-sipge {
+                height: 105px;
+                margin-bottom: 14px;
+            }
+        }
+
+        .hub-intro-footer {
+            margin-top: auto;
+            padding-top: 16px;
+            border-top: 1px solid rgba(93, 93, 93, 0.18);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+            width: 100%;
+        }
+
+        .hub-hint {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(35, 115, 170, 0.12);
+            border: 1px solid rgba(35, 115, 170, 0.3);
+            color: #7dc1e5;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 8px 14px;
+            border-radius: 20px;
+            animation: hintPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes hintPulse {
+
+            0%,
+            100% {
+                opacity: 1
+            }
+
+            50% {
+                opacity: 0.7
+            }
+        }
+
+        .detail-panel {
+            display: none;
+            flex-direction: column;
+            height: 100%;
+            overflow-y: auto;
+            padding-right: 6px;
+            scrollbar-width: thin;
+            scrollbar-color: #2373aa transparent;
+        }
+
+        .detail-panel.active {
+            display: flex;
+            animation: fadeInUp 0.5s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(12px)
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+
+        .detail-panel::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .detail-panel::-webkit-scrollbar-thumb {
+            background: #2373aa;
+            border-radius: 4px;
+        }
+
+        .detail-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 14px;
+            gap: 12px;
+        }
+
+        .detail-header h3 {
+            font-size: 18px;
+            color: #2373aa;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid #267ca2;
+            padding-bottom: 6px;
+            flex: 1;
+        }
+
+        .btn-back {
+            background: rgba(35, 115, 170, 0.15);
+            border: 1px solid #2373aa;
+            color: #7dc1e5;
+            padding: 7px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.25s;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .btn-back:hover {
+            background: #2373aa;
+            color: #fff;
+            transform: translateX(-2px);
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .detail-card {
+            background: rgba(35, 115, 170, 0.07);
+            border: 1px solid rgba(35, 115, 170, 0.22);
+            border-radius: 10px;
+            padding: 12px;
+        }
+
+        .detail-card h4 {
+            font-size: 11px;
+            color: #7dc1e5;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .detail-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .detail-card li {
+            font-size: 11.5px;
+            color: #b8b8b8;
+            line-height: 1.45;
+            padding-left: 14px;
+            position: relative;
+            margin-bottom: 5px;
+        }
+
+        .detail-card li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #2373aa;
+            font-size: 11px;
+        }
+
+        .detail-card p {
+            font-size: 11.5px;
+            color: #b8b8b8;
+            line-height: 1.5;
+            margin: 0 0 6px;
+        }
+
+        .detail-card strong {
+            color: #e8f1f8;
+        }
+
+        .mini-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 10.5px;
+        }
+
+        .mini-table th {
+            text-align: left;
+            color: #7dc1e5;
+            font-weight: 700;
+            padding: 5px 6px;
+            border-bottom: 1.5px solid #267ca2;
+            background: rgba(35, 115, 170, 0.12);
+            font-size: 10px;
+        }
+
+        .mini-table td {
+            padding: 4px 6px;
+            color: #b8b8b8;
+            border-bottom: 1px solid rgba(93, 93, 93, 0.2);
+        }
+
+        .mini-table tr:nth-child(even) td {
+            background: rgba(93, 93, 93, 0.06);
+        }
+
+        .badge-up {
+            color: #4ade80;
+            font-weight: 800;
+            text-shadow: 0 0 6px rgba(74, 222, 128, 0.35);
+        }
+
+        .badge-down {
+            color: #f87171;
+            font-weight: 700;
+        }
+
+        .positive {
+            color: #4ade80;
+            font-weight: 800;
+            text-shadow: 0 0 6px rgba(74, 222, 128, 0.3);
+        }
+
+        .detail-full {
+            grid-column: 1 / -1;
+        }
+
+        .detail-highlight {
+            background: linear-gradient(135deg, rgba(35, 115, 170, 0.14), rgba(38, 124, 162, 0.08));
+            border-left: 4px solid #267ca2;
+            border-radius: 8px;
+            padding: 10px 12px;
+            margin-top: 4px;
+        }
+
+        .detail-highlight p {
+            font-size: 11.5px;
+            color: #b8b8b8;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .detail-highlight strong {
+            color: #7dc1e5;
+        }
+
+        /* Responsive hub */
+        @media (max-width: 860px) {
+            .hub-view {
+                aspect-ratio: auto;
+                min-height: 560px;
+            }
+
+            .hub-layout {
+                flex-direction: column;
+            }
+
+            .hub-left {
+                width: 100%;
+                height: 300px;
+                justify-content: center;
+            }
+
+            .circle-main {
+                left: 0;
+                width: 220px;
+                height: 220px;
+            }
+
+            .circle-main.shifted {
+                left: 0;
+                transform: scale(0.85);
+                opacity: 0.9;
+            }
+
+            .hub-layout.has-detail .hub-left {
+                width: 100%;
+                height: 180px;
+            }
+
+            .hub-layout.has-detail .circle-main {
+                width: 150px;
+                height: 150px;
+            }
+
+            .hub-layout.has-detail .circle-main.shifted {
+                left: 0;
+                transform: scale(0.9);
+            }
+
+            .satellite {
+                width: 96px;
+                height: 96px;
+            }
+
+            .satellite-04 {
+                top: 8%;
+                right: 12%;
+            }
+
+            .satellite-06 {
+                bottom: 8%;
+                right: 12%;
+            }
+
+            .hub-right {
+                padding: 18px 16px 20px;
+            }
+
+            .detail-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .detail-grid div[style*="grid-template-columns:1fr 1fr"] {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        @media (max-width: 430px) {
+            .hub-left {
+                height: 260px;
+            }
+
+            .circle-main {
+                width: 190px;
+                height: 190px;
+            }
+
+            .satellite {
+                width: 84px;
+                height: 84px;
+            }
+
+            .hub-intro h2 {
+                font-size: 20px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .circle-main,
+            .circle-main::before,
+            .satellite.visible {
+                animation: none !important;
+            }
+        }
+
         /* Ocultar scrollbars */
         *::-webkit-scrollbar {
             width: 0;
@@ -807,436 +1625,372 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
+
+        .detail-panel::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+
+        .detail-panel {
+            scrollbar-width: thin;
+        }
     </style>
 </head>
+
 <body>
     <div class="presentation-container">
-        <!-- DIAPOSITIVA 1: PORTADA -->
-        <div class="slide slide-1 active">
-            <div class="slide-content">
-                <div class="escudos-container">
-                    <img class="escudo escudo-01" src="./01.png" alt="Escudo 01" width="748" height="792" decoding="async" fetchpriority="high" onerror="console.error('Error cargando:', this.src); this.style.display='block'; this.alt='Error al cargar 01.png'">
-                    <img class="escudo escudo-02" src="./02.png" alt="Escudo 02 - Policía de la Ciudad" width="512" height="512" decoding="async" fetchpriority="high" onerror="console.error('Error cargando:', this.src); this.style.display='block'; this.alt='Error al cargar 02.png'">
-                    <img class="escudo escudo-03" src="./04.png" alt="Escudo 04" width="906" height="906" decoding="async" fetchpriority="high" onerror="console.error('Error cargando:', this.src); this.style.display='block'; this.alt='Error al cargar 04.png'">
-                </div>
-                <h1>DIVISIÓN ANILLO DIGITAL</h1>
-                <p class="subtitulo">Informe de Capacidades y Resultados Operativos</p>
-                <p class="departamento">Departamento Coordinación Operativa | Dirección Videoseguridad | Superintendencia Prevención y Gestión de Emergencias</p>
-                <p class="departamento" style="margin-top: 30px; font-size: 15px;">Año 2026</p>
-            </div>
-        </div>
-
-        <!-- DIAPOSITIVA 2: CAPACIDADES Y FUNCIONAMIENTO -->
-        <div class="slide slide-2">
-            <div class="slide-content">
-                <h2>Capacidades Operativas</h2>
-                <div class="content-2col">
-                    <div class="content-column">
-                        <h3>🏗️ Infraestructura Tecnológica</h3>
-                        <p><strong>📹 75 Cámaras de Videovigilancia:</strong> Monitoreo permanente 24/7 con cobertura en accesos y puntos estratégicos.</p>
-                        <p><strong>🚗 886 Lectores ANPR/LPR:</strong> Reconocimiento automático de matrículas en toda la Ciudad.</p>
-
-                        <h4 style="color: #267ca2; font-size: 13px; margin: 10px 0 6px; text-transform: uppercase; letter-spacing: 0.5px;">🚙 Parque Automotor</h4>
-                        <p><strong>43 Rodados Operativos:</strong> Móviles y motos de alta cilindrada y vehículos para respuestas y seguimientos.</p>
-
-                        <h4 style="color: #267ca2; font-size: 13px; margin: 12px 0 6px; text-transform: uppercase; letter-spacing: 0.5px;">👮 Recursos Humanos</h4>
-                        <p><strong>254 Efectivos Policiales y Civiles:</strong> Personal capacitado y entrenado en destrezas especiales.</p>
+        <!-- ===== VISTA CIRCULO ANIMADO (NUEVO) ===== -->
+        <div class="hub-view active" id="hubView" role="main"
+            aria-label="Presentación Anillo Digital - Navegación circular">
+            <div class="hub-layout">
+                <div class="hub-left" id="hubLeft">
+                    <div class="circle-main" id="circleMain" onclick="handleMainClick()" role="button" tabindex="0"
+                        aria-label="Escudo principal Anillo Digital - Click para desplegar opciones"
+                        onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();handleMainClick();}">
+                        <img id="circleImg" src="./01.png" alt="Escudo Anillo Digital">
                     </div>
-
-                    <div class="content-column">
-                        <h3>⚙️ Funciones Principales</h3>
-                        <ul>
-                            <li><strong>🚨 Detención de Vehículos:</strong> Vehículos con impedimento legal vigente</li>
-                            <li><strong>🎯 Detección Temprana:</strong> Vehículos y situaciones de interés en tiempo real</li>
-                            <li><strong>📊 Monitoreo:</strong> Cámaras de videovigilancia y sistemas ANPR/LPR</li>
-                            <li><strong>✓ Verificación:</strong> Evaluación y validación de alarmas y eventos</li>
-                            <li><strong>📡 Coordinación:</strong> Despliegue eficiente de recursos policiales</li>
-                            <li><strong>🔗 Articulación:</strong> Conexión con dependencias y organismos competentes</li>
-                        </ul>
-
-                        <h3 style="margin-top: 25px;">✅ Certificación de Calidad</h3>
-                        <p style="font-size: 12px; color: #b8b8b8; line-height: 1.6;">
-                            Sistema de Gestión <strong>ISO 9001:2015</strong><br>
-                            Certificado por <strong>TÜV Rheinland</strong><br>
-                            <a href="https://www.certipedia.com/certificates/01+10006+2129714?locale=es" target="_blank" rel="noopener noreferrer" style="color: #7dc1e5; text-decoration: underline;">
-                                Cert. N° 01 10006 2129714
-                            </a>
-                        </p>
+                    <div class="satellite satellite-04" id="sat04" onclick="showDetail('04')" role="button" tabindex="0"
+                        aria-label="Ver División Anillo Digital"
+                        onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();showDetail('04');}">
+                        <img src="./04.png" alt="Escudo Operativo">
+                    </div>
+                    <div class="satellite satellite-06" id="sat06" onclick="showDetail('06')" role="button" tabindex="0"
+                        aria-label="Ver División Sensores Tecnológicos"
+                        onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();showDetail('06');}">
+                        <img src="./06.jpeg" alt="Escudo Sensores">
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <!-- DIAPOSITIVA 3: GRÁFICOS DE RESULTADOS -->
-        <div class="slide slide-3">
-            <div class="slide-content">
-                <h2>Resultados Operativos 2025 vs 2026</h2>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; flex: 1; padding-top: 15px;">
-                    <div style="background: rgba(35, 115, 170, 0.08); border-radius: 12px; padding: 20px; border: 1px solid rgba(35, 115, 170, 0.3);">
-                        <h4 style="color: #2373aa; margin-bottom: 15px; font-size: 14px;">📊 Procedimientos Realizados</h4>
-                        <canvas id="chartProcedimientos" style="max-height: 220px;"></canvas>
+                <div class="hub-right" id="hubRight">
+                    <div class="hub-intro" id="hubIntro">
+                        <div class="hub-intro-main">
+                            <img class="hub-escudo-sipge" src="./02.png"
+                                alt="Escudo Superintendencia de Prevención y Gestión de Emergencias" width="512"
+                                height="512" decoding="async" loading="lazy">
+                            <h2 style="font-size: clamp(22px, 2.6vw, 32px); margin-bottom: 8px; letter-spacing: 1px; line-height: 1.15;">Superintendencia de Prevención y Gestión de Emergencias</h2>
+                            <div style="font-size: clamp(18px, 2vw, 26px); color: #7dc1e5; font-weight: 700; letter-spacing: 0.8px; margin-bottom: 8px; text-align: center; line-height: 1.2;">Dirección Videoseguridad</div>
+                            <div style="font-size: clamp(16px, 1.7vw, 22px); color: #b8b8b8; font-weight: 600; letter-spacing: 0.6px; text-align: center; line-height: 1.2;">Departamento Coordinación Operativa</div>
+                        </div>
+                        <div class="hub-intro-footer">
+                            <div class="hub-hint" id="hubHint">◎ Toca el escudo para explorar →</div>
+                            <p style="font-size:10.5px; color:#5d5d5d; margin:0;">Certificación ISO 9001:2015 · TÜV
+                                Rheinland · Cert. N° 01 10006 2129714</p>
+                        </div>
                     </div>
-                    <div style="background: rgba(35, 115, 170, 0.08); border-radius: 12px; padding: 20px; border: 1px solid rgba(35, 115, 170, 0.3);">
-                        <h4 style="color: #2373aa; margin-bottom: 15px; font-size: 14px;">📈 Alarmas Atendidas</h4>
-                        <canvas id="chartAlarmas" style="max-height: 220px;"></canvas>
+                    <!-- Panel 04: División Anillo Digital -->
+                    <div class="detail-panel" id="detail04" aria-live="polite">
+                        <div class="detail-header">
+                            <h3>División Anillo Digital</h3>
+                            <button class="btn-back" onclick="backToHub()" aria-label="Volver al menú principal">←
+                                Volver</button>
+                        </div>
+                        <div class="detail-grid">
+                            <div class="detail-card">
+                                <h4>🏗️ Capacidades Operativas</h4>
+                                <ul style="margin-bottom:10px;">
+                                    <li><strong>75 Cámaras</strong> 24/7</li>
+                                    <li><strong>886 ANPR/LPR</strong></li>
+                                    <li><strong>43 móviles</strong></li>
+                                    <li><strong>254 efectivos</strong></li>
+                                </ul>
+                                <ul>
+                                    <li>Detención de vehículos con impedimento legal</li>
+                                    <li>Detección temprana en tiempo real</li>
+                                    <li>Monitoreo y verificación de alarmas</li>
+                                    <li>Coordinación y articulación interinstitucional</li>
+                                </ul>
+                            </div>
+                            <div class="detail-card">
+                                <h4>📊 Resultados 2025 vs 2026 <span
+                                        style="font-size:9px; color:#5d5d5d; font-weight:600; letter-spacing:0.4px;">·
+                                        ENE - JUL</span></h4>
+                                <table class="mini-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Indicador</th>
+                                            <th>2025</th>
+                                            <th>2026</th>
+                                            <th>Variación</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Intercept. c/ secuestro</td>
+                                            <td>200</td>
+                                            <td>247</td>
+                                            <td class="badge-up">↑ 23.5%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Aprehendidos</td>
+                                            <td>290</td>
+                                            <td>314</td>
+                                            <td class="badge-up">↑ 8.3%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Actuaciones</td>
+                                            <td>1.696</td>
+                                            <td>3.092</td>
+                                            <td class="badge-up">↑ 82.4%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Alarmas</td>
+                                            <td>3.039.520</td>
+                                            <td>3.166.212</td>
+                                            <td class="badge-up">↑ 4.2%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Alarmas atendidas</td>
+                                            <td>665.039</td>
+                                            <td>1.753.812</td>
+                                            <td class="badge-up">↑ 163.8%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Promedio del Incremento de Personal</td>
+                                            <td>203</td>
+                                            <td>238</td>
+                                            <td style="color:#5d5d5d; font-size:10px;">—</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="detail-card detail-full" style="padding:10px;">
+                                <h4>📈 Gráficos — Resultados Operativos 2025 vs 2026 <span
+                                        style="font-size:9px; color:#5d5d5d; font-weight:600; letter-spacing:0.4px;">·
+                                        ENE - JUL</span></h4>
+                                <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+                                    <div class="chart-box">
+                                        <div
+                                            style="font-size:10px; color:#7dc1e5; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:6px; text-align:center;">
+                                            Procedimientos</div>
+                                        <canvas id="hubChartProcedimientos" width="400" height="180"></canvas>
+                                    </div>
+                                    <div class="chart-box">
+                                        <div
+                                            style="font-size:10px; color:#7dc1e5; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:6px; text-align:center;">
+                                            Alarmas</div>
+                                        <canvas id="hubChartAlarmas" width="400" height="180"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="detail-card detail-full">
+                                <h4>✅ Conclusiones y Logros 2026</h4>
+                                <ul>
+                                    <li><span class="positive">+163.8% alarmas atendidas</span> por refuerzo de personal
+                                        de monitoreo</li>
+                                    <li><span class="positive">+82.4% actuaciones</span> y <span class="positive">+23.5%
+                                            interceptaciones</span> por renovación de flota</li>
+                                    <li>Detección temprana optimizada y respuesta coordinada</li>
+                                    <li>Articulación interna (PCA, Comisarías, COP) y externa (Prov. BA, Autopistas,
+                                        Bomberos)</li>
+                                </ul>
+                                <div class="detail-highlight">
+                                    <p><strong>🚁 Próximo paso:</strong> Incorporación de <strong>drones</strong> para
+                                        seguimiento vehicular y cobertura aérea en tiempo real.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- DIAPOSITIVA 4: TABLAS DETALLADAS CON RESULTADOS POSITIVOS -->
-        <div class="slide slide-4">
-            <div class="slide-content">
-                <h2>Resultados Destacados 2025 vs 2026</h2>
-                
-                <div class="table-container">
-                    <h3>📋 Procedimientos Realizados (Enero - Julio)</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th style="background: linear-gradient(135deg, rgba(35, 115, 170, 0.3), rgba(38, 124, 162, 0.3));">Indicador</th>
-                                <th>2025</th>
-                                <th>2026</th>
-                                <th>Variación</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr style="background: rgba(38, 124, 162, 0.08);">
-                                <td class="año-cell">✓ Interceptaciones con Secuestro</td>
-                                <td><strong>200</strong></td>
-                                <td><strong style="color: #267ca2;">247</strong></td>
-                                <td><span style="color: #267ca2; font-weight: 600;">↑ 23.5%</span></td>
-                            </tr>
-                            <tr style="background: rgba(38, 124, 162, 0.08);">
-                                <td class="año-cell">✓ Aprehendidos</td>
-                                <td><strong>290</strong></td>
-                                <td><strong style="color: #267ca2;">314</strong></td>
-                                <td><span style="color: #267ca2; font-weight: 600;">↑ 8.3%</span></td>
-                            </tr>
-                            <tr style="background: rgba(38, 124, 162, 0.08);">
-                                <td class="año-cell">✓ Actuaciones totales</td>
-                                <td><strong>1.696</strong></td>
-                                <td><strong style="color: #267ca2;">3.092</strong></td>
-                                <td><span style="color: #267ca2; font-weight: 600;">↑ 82.4%</span></td>
-                            </tr>
-                            <tr style="background: rgba(38, 124, 162, 0.08);">
-                                <td class="año-cell">✓ Vehículos Identificados</td>
-                                <td><strong>7.809</strong></td>
-                                <td><strong style="color: #dc2626;">7.181</strong></td>
-                                <td><span style="color: #dc2626; font-weight: 700;">↓ 8.0%</span></td>
-                            </tr>
-                            <tr style="background: rgba(38, 124, 162, 0.08);">
-                                <td class="año-cell">✓ Personas Identificadas</td>
-                                <td><strong>8.468</strong></td>
-                                <td><strong style="color: #dc2626;">8.393</strong></td>
-                                <td><span style="color: #dc2626; font-weight: 700;">↓ 0.9%</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="table-container">
-                    <h3>🔔 Alarmas: Mejora Significativa en Atención (Enero - Julio)</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th style="background: linear-gradient(135deg, rgba(35, 115, 170, 0.3), rgba(38, 124, 162, 0.3));">Indicador</th>
-                                <th>2025</th>
-                                <th>2026</th>
-                                <th>Variación</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr style="background: rgba(38, 124, 162, 0.15); border-left: 4px solid #267ca2;">
-                                <td class="año-cell"><strong>✓ ALARMAS ATENDIDAS</strong></td>
-                                <td><strong>665.039</strong></td>
-                                <td><strong style="color: #267ca2; font-size: 14px;">1.753.812</strong></td>
-                                <td><span style="color: #267ca2; font-weight: 700; font-size: 14px;">↑ 163.8%</span></td>
-                            </tr>
-                            <tr style="background: rgba(38, 124, 162, 0.08);">
-                                <td class="año-cell">Total de Alarmas Procesadas</td>
-                                <td><strong>3.039.520</strong></td>
-                                <td><strong>3.166.212</strong></td>
-                                <td><span style="color: #b8b8b8;">+4.2%</span></td>
-                            </tr>
-                            <tr style="background: rgba(38, 124, 162, 0.08);">
-                                <td class="año-cell">✓ Alarmas Sin Tratar</td>
-                                <td><strong>2.292.033</strong></td>
-                                <td><strong style="color: #267ca2;">1.447.622</strong></td>
-                                <td><span style="color: #267ca2; font-weight: 700;">↓ 36.8%</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-
-        <!-- DIAPOSITIVA 5: CONCLUSIÓN -->
-        <div class="slide slide-5">
-            <div class="slide-content">
-                <h2>Conclusiones y Logros 2026</h2>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px; padding-top: 12px; flex: 1;">
-                    <div>
-                        <h3 style="color: #267ca2; font-size: 16px; margin-bottom: 12px;">🎯 Hitos Operativos Destacados</h3>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="font-size: 15px; color: #b8b8b8; margin-bottom: 8px; padding-left: 25px; position: relative;">
-                                <span style="position: absolute; left: 0; color: #267ca2; font-weight: bold;">✓</span>
-                                <strong>+163.8%</strong> en alarmas atendidas (665K → 1.7M)
-                            </li>
-                            <li style="font-size: 15px; color: #b8b8b8; margin-bottom: 15px; padding-left: 30px; position: relative;">
-                                <span style="position: absolute; left: 0; color: #267ca2; font-weight: bold;">✓</span>
-                                <strong>+23.5%</strong> en interceptaciones con secuestro (200 → 247)
-                            </li>
-                            <li style="font-size: 15px; color: #b8b8b8; margin-bottom: 15px; padding-left: 30px; position: relative;">
-                                <span style="position: absolute; left: 0; color: #267ca2; font-weight: bold;">✓</span>
-                                <strong>+82.4%</strong> en actuaciones (1.6K → 3.0K)
-                            </li>
-                            <li style="font-size: 15px; color: #b8b8b8; margin-bottom: 15px; padding-left: 30px; position: relative;">
-                                <span style="position: absolute; left: 0; color: #267ca2; font-weight: bold;">✓</span>
-                                <strong>+8.3%</strong> en aprehendidos (290 → 314)
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h3 style="color: #267ca2; font-size: 15px; margin-bottom: 10px;">📊 Impacto Operacional</h3>
-                        <ul style="list-style: none; padding: 0; margin: 0;">
-                            <li style="font-size: 13px; color: #b8b8b8; margin-bottom: 6px; padding-left: 22px; position: relative; line-height: 1.3;">
-                                <span style="position: absolute; left: 0; color: #267ca2; font-weight: bold;">→</span>
-                                Detección temprana optimizada de eventos de interés
-                            </li>
-                            <li style="font-size: 13px; color: #b8b8b8; margin-bottom: 6px; padding-left: 22px; position: relative; line-height: 1.3;">
-                                <span style="position: absolute; left: 0; color: #267ca2; font-weight: bold;">→</span>
-                                Respuesta operacional más eficiente y coordinada
-                            </li>
-                            <li style="font-size: 13px; color: #b8b8b8; margin-bottom: 6px; padding-left: 22px; position: relative; line-height: 1.3;">
-                                <span style="position: absolute; left: 0; color: #267ca2; font-weight: bold;">→</span>
-                                Debido al aumento del personal de calle y al aumento y recambio del parque automotor, se logró una mayor cantidad de intercepciones efectivas
-                            </li>
-                            <li style="font-size: 13px; color: #b8b8b8; margin-bottom: 6px; padding-left: 22px; position: relative; line-height: 1.3;">
-                                <span style="position: absolute; left: 0; color: #267ca2; font-weight: bold;">→</span>
-                                Aumento de personal de monitoreo generó incremento significativo en atención de alarmas, resultando en mayor eficacia en detección de vehículos de interés
-                            </li>
-                        </ul>
-
-                        <h3 style="color: #267ca2; font-size: 14px; margin: 12px 0 8px; text-transform: uppercase; letter-spacing: 0.4px;">Articulación e Integración Organística</h3>
-                        <ul style="list-style: none; padding: 0; margin: 0;">
-                            <li style="font-size: 12px; color: #b8b8b8; margin-bottom: 5px; line-height: 1.3; padding-left: 18px; position: relative;">
-                                <span style="position: absolute; left: 0; color: #267ca2; font-weight: bold;">•</span>
-                                <strong>Interna:</strong> PCA Norte/Sur, Comisarías, Móviles, COP, Monitoreos y Operaciones Aéreas
-                            </li>
-                            <li style="font-size: 12px; color: #b8b8b8; margin-bottom: 5px; line-height: 1.3; padding-left: 18px; position: relative;">
-                                <span style="position: absolute; left: 0; color: #267ca2; font-weight: bold;">•</span>
-                                <strong>Externa:</strong> Prov. BS.AS., Autopistas, Bomberos, Defensa Civil, SAECAD y Judiciales
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div style="background: linear-gradient(135deg, rgba(35, 115, 170, 0.15) 0%, rgba(38, 124, 162, 0.08) 100%); border-left: 5px solid #267ca2; border-radius: 8px; padding: 14px; margin-top: 10px;">
-                    <p style="font-size: 12px; color: #b8b8b8; line-height: 1.5;">
-                        <strong style="color: #2373aa;">La División Anillo Digital ha consolidado su posición como actor clave</strong> en el monitoreo y seguridad de la Ciudad, demostrando un crecimiento sostenido en capacidades operativas, respuesta temprana y coordinación interinstitucional. Los resultados 2026 reflejan la efectividad del sistema ANPR/LPR, la dedicación del personal capacitado y la inversión en infraestructura tecnológica.
-                    </p>
-                </div>
-
-                <div style="background: linear-gradient(135deg, rgba(38, 124, 162, 0.18) 0%, rgba(35, 115, 170, 0.10) 100%); border: 1px solid rgba(38, 124, 162, 0.35); border-left: 5px solid #267ca2; border-radius: 10px; padding: 12px 14px; margin-top: 10px; display: flex; gap: 10px; align-items: flex-start;">
-                    <span style="font-size: 18px; line-height: 1; flex-shrink: 0; margin-top: 1px;">🚁</span>
-                    <div>
-                        <p style="font-size: 12px; color: #7dc1e5; font-weight: 700; letter-spacing: 0.4px; text-transform: uppercase; margin-bottom: 4px;">Próximo paso · Innovación operativa</p>
-                        <p style="font-size: 12px; color: #b8b8b8; line-height: 1.5; margin: 0;">
-                            Se encuentra en <strong style="color: #e8f1f8;">planificación la incorporación de drones</strong> para el seguimiento de vehículos, con el objetivo de ampliar la cobertura aérea, optimizar los tiempos de respuesta y potenciar la capacidad de detección y acompañamiento en tiempo real.
-                        </p>
+                    <!-- Panel 06: Sensores Tecnológicos -->
+                    <div class="detail-panel" id="detail06" aria-live="polite">
+                        <div class="detail-header">
+                            <h3>División Sensores Tecnológicos</h3>
+                            <button class="btn-back" onclick="backToHub()" aria-label="Volver al menú principal">←
+                                Volver</button>
+                        </div>
+                        <div class="detail-grid">
+                            <div class="detail-card">
+                                <h4>🔬 Misión</h4>
+                                <p>Es misión de la División Sensores Tecnológicos <strong>recepcionar y gestionar las emergencias</strong> producidas luego de la activación de los dispositivos de <strong>botones antipánico, pulseras y tobilleras electrónicas</strong>, coordinando el envío de los recursos necesarios a través de las agencias correspondientes, como así también el <strong>monitoreo de los dispositivos tecnológicos que se encuentran judicializados</strong>.</p>
+                            </div>
+                            <div class="detail-card">
+                                <h4>🏛️ Dependencia y Organización</h4>
+                                <p>Depende orgánicamente del <strong>Departamento Coordinación Operativa</strong>, conforme art. 176° del Reglamento.</p>
+                                <ul>
+                                    <li><strong>Sección Dispositivos Antipánico</strong></li>
+                                    <li><strong>Sección Pulseras y Tobilleras</strong></li>
+                                </ul>
+                            </div>
+                            <div class="detail-card">
+                                <h4>📊 Resultados 2025 vs 2026 <span style="font-size:9px; color:#5d5d5d; font-weight:600; letter-spacing:0.4px;">· ENE - JUL</span></h4>
+                                <table class="mini-table">
+                                    <thead><tr><th>Indicador</th><th>2025</th><th>2026</th><th>Variación</th></tr></thead>
+                                    <tbody>
+                                        <tr><td>Dispositivos Antipánico Monitoreados</td><td>26.207</td><td>31.620</td><td class="badge-up">↑ 20.7%</td></tr>
+                                        <tr><td>SOS Positivos</td><td>4.967</td><td>4.728</td><td class="badge-down">↓ 4.8%</td></tr>
+                                        <tr><td>SOS Relevantes</td><td>2.175</td><td>2.182</td><td class="badge-up">↑ 0.3%</td></tr>
+                                        <tr><td>DETENIDOS - SDA</td><td>173</td><td>230</td><td class="badge-up">↑ 32.9%</td></tr>
+                                        <tr><td>Volumen de alertas SIMEI (SURELY)</td><td>571.131</td><td>559.031</td><td class="badge-down">↓ 2.1%</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="detail-card detail-full" style="padding:10px;">
+                                <h4>📈 Gráfico — SOS Positivos vs SOS Relevantes <span style="font-size:9px; color:#5d5d5d; font-weight:600; letter-spacing:0.4px;">· ENE - JUL · 2025 vs 2026</span></h4>
+                                <div class="chart-box">
+                                    <canvas id="hubChartSOS" width="400" height="180"></canvas>
+                                </div>
+                            </div>
+                            <div class="detail-card detail-full">
+                                <h4>✅ Conclusiones y Logros 2026</h4>
+                                <ul>
+                                    <li>En el período <strong>2026</strong>, junto a la <strong>División Anillo Digital</strong> y bajo la órbita del <strong>Departamento Coordinación Operativa</strong>, se incorporó a las <strong>Auditorías Normas ISO 9001:2015</strong>, quedando <strong>certificada por TÜV Rheinland</strong></li>
+                                </ul>
+                                <div class="detail-highlight" style="margin-top:8px;">
+                                    <p><strong>🔜 Próximo paso:</strong> Integrar los sistemas <strong>SIMEI (Surely)</strong> y <strong>Administración de Emergencias (SAE)</strong>, permitiendo la transferencia automática de información y fortaleciendo la trazabilidad, el seguimiento y la medición de las intervenciones.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- CONTROLES DE NAVEGACIÓN -->
-        <div class="controls">
-            <button class="btn-anterior" onclick="previousSlide()">← Anterior</button>
-            <div class="slide-indicator">
-                Diapositiva <span id="current-slide">1</span> de <span>5</span>
-            </div>
-            <button class="btn-siguiente" onclick="nextSlide()">Siguiente →</button>
-        </div>
-
-        <div class="footer">
-            División Anillo Digital | Informe 2026 | Superintendencia Prevención y Gestión de Emergencias
+        <div class="footer" style="text-align:center; width:100%; padding:12px 0 4px; font-size:11px; color:#5d5d5d; letter-spacing:0.4px;">
+            Informe 2026 | Policia de la Ciudad | Superintendencia Prevención y Gestión de Emergencias
         </div>
     </div>
 
     <script>
-        let currentSlide = 1;
-        const totalSlides = 5;
-        let chartsInitialized = false;
+        // ===== LÓGICA CIRCULO ANIMADO =====
+        let hubExpanded = false;
+        let activeDetail = null;
+        const circleImg = () => document.getElementById('circleImg');
+        const sat04 = () => document.getElementById('sat04');
+        const sat06 = () => document.getElementById('sat06');
+        const hubIntro = () => document.getElementById('hubIntro');
+        const detail04 = () => document.getElementById('detail04');
+        const detail06 = () => document.getElementById('detail06');
 
-        function showSlide(n) {
-            const slides = document.querySelectorAll('.slide');
-            const btnAnterior = document.querySelector('.btn-anterior');
-            const btnSiguiente = document.querySelector('.btn-siguiente');
-            
-            if (n > totalSlides) {
-                currentSlide = totalSlides;
-            }
-            if (n < 1) {
-                currentSlide = 1;
-            }
-
-            slides.forEach(slide => slide.classList.remove('active'));
-            slides[currentSlide - 1].classList.add('active');
-            
-            document.getElementById('current-slide').textContent = currentSlide;
-
-            // Ocultar/Mostrar botones según diapositiva
-            if (btnAnterior) {
-                btnAnterior.style.visibility = currentSlide === 1 ? 'hidden' : 'visible';
-            }
-            if (btnSiguiente) {
-                btnSiguiente.style.visibility = currentSlide === totalSlides ? 'hidden' : 'visible';
-            }
-
-            // Inicializar gráficos cuando se llega a la diapositiva 3
-            if (currentSlide === 3 && !chartsInitialized) {
-                setTimeout(initializeCharts, 300);
+        function handleMainClick() {
+            if (activeDetail) { backToHub(); return; }
+            const cm = document.getElementById('circleMain');
+            cm.onclick = handleMainClick;
+            if (!hubExpanded) {
+                sat04().classList.add('visible');
+                setTimeout(() => sat06().classList.add('visible'), 140);
+                hubExpanded = true;
+                cm.classList.add('shifted');
+                const hint = document.getElementById('hubHint');
+                if (hint) hint.textContent = '◎ Elige un área →';
+            } else {
+                sat04().classList.remove('visible');
+                sat06().classList.remove('visible');
+                hubExpanded = false;
+                cm.classList.remove('shifted');
+                const hint = document.getElementById('hubHint');
+                if (hint) hint.textContent = '◎ Toca el escudo para explorar →';
             }
         }
-
-        function nextSlide() {
-            currentSlide++;
-            showSlide(currentSlide);
+        let hubChartsReady = false;
+        let hubChartInstances = [];
+        let hubSOSChart = null;
+        function initHubCharts() {
+            const c1 = document.getElementById('hubChartProcedimientos');
+            const c2 = document.getElementById('hubChartAlarmas');
+            if (!c1 || !c2) return;
+            if (typeof Chart === 'undefined') { console.warn('Chart.js no cargado'); return; }
+            hubChartInstances.forEach(ch => { try { ch.destroy(); } catch (e) { } });
+            hubChartInstances = [];
+            hubChartsReady = false;
+            // Procedimientos: Intercept. c/ secuestro, Aprehendidos, Actuaciones
+            hubChartInstances.push(new Chart(c1, {
+                type: 'bar',
+                data: {
+                    labels: ['Intercept. c/ sec.', 'Aprehendidos', 'Actuaciones'],
+                    datasets: [
+                        { label: '2025', data: [200, 290, 1696], backgroundColor: '#3b4a5a', borderColor: '#5a6d82', borderWidth: 1 },
+                        { label: '2026', data: [247, 314, 3092], backgroundColor: '#4ade80', borderColor: '#22c55e', borderWidth: 1 }
+                    ]
+                },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { labels: { color: '#b8b8b8', font: { size: 9, weight: '700' }, boxWidth: 12, usePointStyle: true, pointStyle: 'rectRounded' } }, tooltip: { callbacks: { label: ctx => `${ctx.dataset.label}: ${ctx.parsed.y.toLocaleString('es-AR')}` } } }, scales: { y: { beginAtZero: true, ticks: { color: '#8a8a8a', font: { size: 8 } }, grid: { color: 'rgba(93,93,93,0.15)' } }, x: { ticks: { color: '#8a8a8a', font: { size: 8 } }, grid: { display: false } } } }
+            }));
+            // Alarmas: Alarmas totales vs Atendidas
+            hubChartInstances.push(new Chart(c2, {
+                type: 'bar',
+                data: {
+                    labels: ['Alarmas', 'Atendidas'],
+                    datasets: [
+                        { label: '2025', data: [3039520, 665039], backgroundColor: '#3b4a5a', borderColor: '#5a6d82', borderWidth: 1 },
+                        { label: '2026', data: [3166212, 1753812], backgroundColor: '#4ade80', borderColor: '#22c55e', borderWidth: 1 }
+                    ]
+                },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { labels: { color: '#b8b8b8', font: { size: 9, weight: '700' }, boxWidth: 12, usePointStyle: true, pointStyle: 'rectRounded' } }, tooltip: { callbacks: { label: ctx => `${ctx.dataset.label}: ${ctx.parsed.y.toLocaleString('es-AR')}` } } }, scales: { y: { beginAtZero: true, ticks: { color: '#8a8a8a', font: { size: 8 }, callback: v => v >= 1000000 ? (v / 1000000).toFixed(1) + 'M' : v >= 1000 ? (v / 1000).toFixed(0) + 'K' : v }, grid: { color: 'rgba(93,93,93,0.15)' } }, x: { ticks: { color: '#8a8a8a', font: { size: 8 } }, grid: { display: false } } } }
+            }));
+            hubChartsReady = true;
         }
-
-        function previousSlide() {
-            currentSlide--;
-            showSlide(currentSlide);
+        function initSOSChart() {
+            const c = document.getElementById('hubChartSOS');
+            if (!c) return;
+            if (typeof Chart === 'undefined') return;
+            if (hubSOSChart) { try { hubSOSChart.destroy(); } catch(e){} hubSOSChart = null; }
+            hubSOSChart = new Chart(c, {
+                type: 'bar',
+                data: {
+                    labels: ['SOS Positivos', 'SOS Relevantes'],
+                    datasets: [
+                        { label: '2025', data: [4967, 2175], backgroundColor: '#3b4a5a', borderColor: '#5a6d82', borderWidth: 1 },
+                        { label: '2026', data: [4728, 2182], backgroundColor: '#4ade80', borderColor: '#22c55e', borderWidth: 1 }
+                    ]
+                },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { labels: { color: '#b8b8b8', font: { size: 9, weight: '700' }, boxWidth: 12, usePointStyle: true, pointStyle: 'rectRounded' } }, tooltip: { callbacks: { label: ctx => `${ctx.dataset.label}: ${ctx.parsed.y.toLocaleString('es-AR')}` } } }, scales: { y: { beginAtZero: true, ticks: { color: '#8a8a8a', font: { size: 8 } }, grid: { color: 'rgba(93,93,93,0.15)' } }, x: { ticks: { color: '#8a8a8a', font: { size: 8 } }, grid: { display: false } } } }
+            });
         }
-
-        function initializeCharts() {
-            // Gráfico de Procedimientos
-            const ctxProcedimientos = document.getElementById('chartProcedimientos');
-            if (ctxProcedimientos) {
-                new Chart(ctxProcedimientos, {
-                    type: 'bar',
-                    data: {
-                        labels: ['Interceptaciones', 'Aprehendidos', 'Actuaciones'],
-                        datasets: [
-                            {
-                                label: '2025',
-                                data: [979, 290, 1696],
-                                backgroundColor: 'rgba(30, 136, 229, 0.8)',
-                                borderColor: '#1E88E5',
-                                borderWidth: 2
-                            },
-                            {
-                                label: '2026',
-                                data: [866, 314, 3092],
-                                backgroundColor: 'rgba(245, 158, 11, 0.8)',
-                                borderColor: '#F59E0B',
-                                borderWidth: 2
-                            }
-                        ]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: true,
-                        plugins: {
-                            legend: {
-                                labels: {
-                                    color: '#b8b8b8',
-                                    font: { size: 11, weight: '600' }
-                                }
-                            }
-                        },
-                        scales: {
-                            y: {
-                                ticks: { color: '#b8b8b8', font: { size: 10 } },
-                                grid: { color: 'rgba(93, 93, 93, 0.2)' }
-                            },
-                            x: {
-                                ticks: { color: '#b8b8b8', font: { size: 10 } },
-                                grid: { color: 'rgba(93, 93, 93, 0.2)' }
-                            }
-                        }
-                    }
-                });
+        function showDetail(which) {
+            hubIntro().style.display = 'none';
+            detail04().classList.remove('active');
+            detail06().classList.remove('active');
+            document.querySelector('.hub-layout').classList.add('has-detail');
+            const cm = document.getElementById('circleMain');
+            if (which === '04') {
+                detail04().classList.add('active');
+                circleImg().src = './04.png';
+                circleImg().alt = 'División Anillo Digital - Volver al inicio';
+                cm.title = 'Volver al inicio';
+                cm.setAttribute('aria-label', 'Imagen División Anillo Digital - Click para volver al inicio');
+                requestAnimationFrame(() => requestAnimationFrame(() => setTimeout(() => { initHubCharts(); setTimeout(() => hubChartInstances.forEach(c=>c.resize()), 100); }, 120)));
+            } else {
+                detail06().classList.add('active');
+                circleImg().src = './06.jpeg';
+                circleImg().alt = 'División Sensores Tecnológicos - Volver al inicio';
+                cm.title = 'Volver al inicio';
+                cm.setAttribute('aria-label', 'Imagen Sensores Tecnológicos - Click para volver al inicio');
+                requestAnimationFrame(() => requestAnimationFrame(() => setTimeout(() => { initSOSChart(); setTimeout(() => { if(hubSOSChart) hubSOSChart.resize(); }, 100); }, 120)));
             }
-
-            // Gráfico de Alarmas
-            const ctxAlarmas = document.getElementById('chartAlarmas');
-            if (ctxAlarmas) {
-                new Chart(ctxAlarmas, {
-                    type: 'line',
-                    data: {
-                        labels: ['Total Alarmas', 'Atendidas', 'Sin Tratar'],
-                        datasets: [
-                            {
-                                label: '2025',
-                                data: [3039520, 665039, 2292033],
-                                borderColor: '#1E88E5',
-                                backgroundColor: 'rgba(30, 136, 229, 0.15)',
-                                borderWidth: 3,
-                                fill: true,
-                                tension: 0.4,
-                                pointBackgroundColor: '#1E88E5',
-                                pointBorderColor: '#ffffff',
-                                pointBorderWidth: 2,
-                                pointRadius: 5
-                            },
-                            {
-                                label: '2026',
-                                data: [3166212, 1753812, 1447622],
-                                borderColor: '#F59E0B',
-                                backgroundColor: 'rgba(245, 158, 11, 0.15)',
-                                borderWidth: 3,
-                                fill: true,
-                                tension: 0.4,
-                                pointBackgroundColor: '#F59E0B',
-                                pointBorderColor: '#ffffff',
-                                pointBorderWidth: 2,
-                                pointRadius: 5
-                            }
-                        ]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: true,
-                        plugins: {
-                            legend: {
-                                labels: {
-                                    color: '#b8b8b8',
-                                    font: { size: 11, weight: '600' }
-                                }
-                            }
-                        },
-                        scales: {
-                            y: {
-                                ticks: { color: '#b8b8b8', font: { size: 10 } },
-                                grid: { color: 'rgba(93, 93, 93, 0.2)' }
-                            },
-                            x: {
-                                ticks: { color: '#b8b8b8', font: { size: 10 } },
-                                grid: { color: 'rgba(93, 93, 93, 0.2)' }
-                            }
-                        }
-                    }
-                });
-            }
-
-            chartsInitialized = true;
+            sat04().style.display = 'none';
+            sat06().style.display = 'none';
+            activeDetail = which;
+            cm.classList.add('shifted');
+            cm.style.cursor = 'pointer';
+            cm.onclick = backToHub;
         }
-
-        // Navegación con teclas
+        function backToHub() {
+            if (hubSOSChart) { try { hubSOSChart.destroy(); } catch(e){} hubSOSChart = null; }
+            detail04().classList.remove('active');
+            detail06().classList.remove('active');
+            hubIntro().style.display = '';
+            circleImg().src = './01.png';
+            circleImg().alt = 'Escudo Anillo Digital';
+            const cm = document.getElementById('circleMain');
+            cm.title = '';
+            cm.setAttribute('aria-label', 'Escudo principal Anillo Digital - Click para desplegar opciones');
+            cm.style.cursor = 'pointer';
+            activeDetail = null;
+            cm.classList.remove('shifted');
+            cm.onclick = handleMainClick;
+            document.querySelector('.hub-layout').classList.remove('has-detail');
+            sat04().style.display = ''; sat04().style.opacity = ''; sat04().style.pointerEvents = '';
+            sat06().style.display = ''; sat06().style.opacity = ''; sat06().style.pointerEvents = '';
+            sat04().classList.remove('visible');
+            sat06().classList.remove('visible');
+            hubExpanded = false;
+            setTimeout(() => handleMainClick(), 80);
+            const hint = document.getElementById('hubHint');
+            if (hint) hint.textContent = '◎ Toca el escudo para explorar →';
+        }
+        // Navegación con teclas (solo vista circular)
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowRight') nextSlide();
-            if (e.key === 'ArrowLeft') previousSlide();
-            if (e.key === ' ') {
-                e.preventDefault();
-                nextSlide();
-            }
+            if (e.key === 'Escape' && activeDetail) backToHub();
+            if (e.key === 'Enter' && !activeDetail && document.activeElement.id === 'circleMain') handleMainClick();
         });
-
-        // Inicializar
-        showSlide(currentSlide);
     </script>
 </body>
+
 </html>
