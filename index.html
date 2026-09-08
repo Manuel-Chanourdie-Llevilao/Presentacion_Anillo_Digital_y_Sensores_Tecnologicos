@@ -1642,6 +1642,30 @@
         .detail-panel {
             scrollbar-width: thin;
         }
+
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #2373aa 0%, #267ca2 100%);
+            color: #fff;
+            border: none;
+            padding: 9px 18px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(35, 115, 170, 0.35);
+            transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+        }
+        .btn-download:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(35, 115, 170, 0.45);
+            color: #fff;
+        }
+        .btn-download:active { transform: translateY(0); }
     </style>
 </head>
 
@@ -1665,7 +1689,7 @@
                     <div class="satellite satellite-06" id="sat06" onclick="showDetail('06')" role="button" tabindex="0"
                         aria-label="Ver División Sensores Tecnológicos"
                         onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();showDetail('06');}">
-                        <img src="./06.jpeg" alt="Escudo Sensores">
+                        <img src="./06.png" alt="Escudo Sensores">
                     </div>
                 </div>
                 <div class="hub-right" id="hubRight">
@@ -1682,6 +1706,7 @@
                             <div class="hub-hint" id="hubHint">◎ Toca el escudo para explorar →</div>
                             <p style="font-size:10.5px; color:#5d5d5d; margin:0;">Certificación ISO 9001:2015 · TÜV
                                 Rheinland · Cert. N° 01 10006 2129714</p>
+                            <a class="btn-download" href="./Presentacion_Anillo_Digital_y_Sensores_Tecnologicos.pptx" download="Presentacion_Anillo_Digital_y_Sensores_Tecnologicos.pptx" aria-label="Descargar presentación en PowerPoint">⬇ Descargar presentación</a>
                         </div>
                     </div>
                     <!-- Panel 04: División Anillo Digital -->
@@ -2015,7 +2040,7 @@
                 requestAnimationFrame(() => requestAnimationFrame(() => setTimeout(() => { initHubCharts(); setTimeout(() => hubChartInstances.forEach(c=>c.resize()), 100); }, 120)));
             } else {
                 detail06().classList.add('active');
-                circleImg().src = './06.jpeg';
+                circleImg().src = './06.png';
                 circleImg().alt = 'División Sensores Tecnológicos - Volver al inicio';
                 cm.title = 'Volver al inicio';
                 cm.setAttribute('aria-label', 'Imagen Sensores Tecnológicos - Click para volver al inicio');
