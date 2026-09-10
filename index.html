@@ -1679,23 +1679,23 @@
                     <div class="circle-main" id="circleMain" onclick="handleMainClick()" role="button" tabindex="0"
                         aria-label="Escudo principal Anillo Digital - Click para desplegar opciones"
                         onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();handleMainClick();}">
-                        <img id="circleImg" src="./01.png" alt="Escudo Anillo Digital">
+                        <img id="circleImg" src="./01.png?v=20260910" alt="Escudo Anillo Digital" width="512" height="512" loading="eager" decoding="async" onerror="this.onerror=null;this.src='./01.png?v=20260910'">
                     </div>
                     <div class="satellite satellite-04" id="sat04" onclick="showDetail('04')" role="button" tabindex="0"
                         aria-label="Ver División Anillo Digital"
                         onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();showDetail('04');}">
-                        <img src="./04.png" alt="Escudo Operativo">
+                        <img src="./04.png?v=20260910" alt="Escudo Operativo" width="512" height="512" loading="eager" decoding="async">
                     </div>
                     <div class="satellite satellite-06" id="sat06" onclick="showDetail('06')" role="button" tabindex="0"
                         aria-label="Ver División Sensores Tecnológicos"
                         onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();showDetail('06');}">
-                        <img src="./06.png" alt="Escudo Sensores">
+                        <img src="./06.png?v=20260910" alt="Escudo Sensores" width="512" height="512" loading="eager" decoding="async">
                     </div>
                 </div>
                 <div class="hub-right" id="hubRight">
                     <div class="hub-intro" id="hubIntro">
                         <div class="hub-intro-main">
-                            <img class="hub-escudo-sipge" src="./02.png"
+                            <img class="hub-escudo-sipge" src="./02.png?v=20260910"
                                 alt="Escudo Superintendencia de Prevención y Gestión de Emergencias" width="512"
                                 height="512" decoding="async" loading="lazy">
                             <h2 style="font-size: clamp(22px, 2.6vw, 32px); margin-bottom: 8px; letter-spacing: 1px; line-height: 1.15;">Superintendencia de Prevención y Gestión de Emergencias</h2>
@@ -2040,14 +2040,14 @@
             const cm = document.getElementById('circleMain');
             if (which === '04') {
                 detail04().classList.add('active');
-                circleImg().src = './04.png';
+                circleImg().src = './04.png?v=20260910';
                 circleImg().alt = 'División Anillo Digital - Volver al inicio';
                 cm.title = 'Volver al inicio';
                 cm.setAttribute('aria-label', 'Imagen División Anillo Digital - Click para volver al inicio');
                 requestAnimationFrame(() => requestAnimationFrame(() => setTimeout(() => { initHubCharts(); setTimeout(() => hubChartInstances.forEach(c=>c.resize()), 100); }, 120)));
             } else {
                 detail06().classList.add('active');
-                circleImg().src = './06.png';
+                circleImg().src = './06.png?v=20260910';
                 circleImg().alt = 'División Sensores Tecnológicos - Volver al inicio';
                 cm.title = 'Volver al inicio';
                 cm.setAttribute('aria-label', 'Imagen Sensores Tecnológicos - Click para volver al inicio');
@@ -2066,7 +2066,7 @@
             detail04().classList.remove('active');
             detail06().classList.remove('active');
             hubIntro().style.display = '';
-            circleImg().src = './01.png';
+            circleImg().src = './01.png?v=20260910';
             circleImg().alt = 'Escudo Anillo Digital';
             const cm = document.getElementById('circleMain');
             cm.title = '';
