@@ -1752,6 +1752,24 @@
                                     </thead>
                                     <tbody>
                                         <tr>
+                                            <td>Alarmas</td>
+                                            <td>3.039.520</td>
+                                            <td>3.166.212</td>
+                                            <td class="badge-up">↑ 4.2%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Alarmas atendidas</td>
+                                            <td>665.039</td>
+                                            <td>1.753.812</td>
+                                            <td class="badge-up">↑ 163.8%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Alarmas Sin Atender</td>
+                                            <td>2.292.033</td>
+                                            <td>1.447.622</td>
+                                            <td class="badge-down">↓ 36.8%</td>
+                                        </tr>
+                                        <tr>
                                             <td>Intercept. c/ secuestro</td>
                                             <td>200</td>
                                             <td>247</td>
@@ -1770,22 +1788,46 @@
                                             <td class="badge-up">↑ 82.4%</td>
                                         </tr>
                                         <tr>
-                                            <td>Alarmas</td>
-                                            <td>3.039.520</td>
-                                            <td>3.166.212</td>
-                                            <td class="badge-up">↑ 4.2%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Alarmas atendidas</td>
-                                            <td>665.039</td>
-                                            <td>1.753.812</td>
-                                            <td class="badge-up">↑ 163.8%</td>
-                                        </tr>
-                                        <tr>
                                             <td>Promedio del Incremento de Personal</td>
                                             <td>203</td>
                                             <td>238</td>
                                             <td class="badge-up">↑ 17.2%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Motovehículos Policiales</td>
+                                            <td>29</td>
+                                            <td>28</td>
+                                            <td class="badge-down">↓ 3.4%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Móviles</td>
+                                            <td>16</td>
+                                            <td>16</td>
+                                            <td style="color:#b8b8b8; font-weight:700;">→ 0.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Personal Policial</td>
+                                            <td>140</td>
+                                            <td>154</td>
+                                            <td class="badge-up">↑ 10.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Capacitaciones Personal Policial</td>
+                                            <td>16</td>
+                                            <td>27</td>
+                                            <td class="badge-up">↑ 68.8%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Persona Civil</td>
+                                            <td>68</td>
+                                            <td>99</td>
+                                            <td class="badge-up">↑ 45.6%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Capacitaciones Personal Civil</td>
+                                            <td>16</td>
+                                            <td>23</td>
+                                            <td class="badge-up">↑ 43.8%</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -1984,14 +2026,14 @@
                 options: { responsive: true, maintainAspectRatio: false, layout: { padding: { top: 16 } }, plugins: { legend: { labels: { color: '#b8b8b8', font: { size: 9, weight: '700' }, boxWidth: 12, usePointStyle: true, pointStyle: 'rectRounded' } }, tooltip: { callbacks: { label: ctx => `${ctx.dataset.label}: ${ctx.parsed.y.toLocaleString('es-AR')}` } } }, scales: { y: { beginAtZero: true, ticks: { color: '#8a8a8a', font: { size: 8 } }, grid: { color: 'rgba(93,93,93,0.15)' } }, x: { ticks: { color: '#8a8a8a', font: { size: 8 } }, grid: { display: false } } } },
                 plugins: [hubBarLabelsPlugin]
             }));
-            // Alarmas: Alarmas totales vs Atendidas
+            // Alarmas: Alarmas totales vs Atendidas vs Sin Atender
             hubChartInstances.push(new Chart(c2, {
                 type: 'bar',
                 data: {
-                    labels: ['Alarmas', 'Atendidas'],
+                    labels: ['Alarmas', 'Atendidas', 'Sin Atender'],
                     datasets: [
-                        { label: '2025', data: [3039520, 665039], backgroundColor: '#3b4a5a', borderColor: '#5a6d82', borderWidth: 1 },
-                        { label: '2026', data: [3166212, 1753812], backgroundColor: '#4ade80', borderColor: '#22c55e', borderWidth: 1 }
+                        { label: '2025', data: [3039520, 665039, 2292033], backgroundColor: '#3b4a5a', borderColor: '#5a6d82', borderWidth: 1 },
+                        { label: '2026', data: [3166212, 1753812, 1447622], backgroundColor: '#4ade80', borderColor: '#22c55e', borderWidth: 1 }
                     ]
                 },
                 options: { responsive: true, maintainAspectRatio: false, layout: { padding: { top: 16 } }, plugins: { legend: { labels: { color: '#b8b8b8', font: { size: 9, weight: '700' }, boxWidth: 12, usePointStyle: true, pointStyle: 'rectRounded' } }, tooltip: { callbacks: { label: ctx => `${ctx.dataset.label}: ${ctx.parsed.y.toLocaleString('es-AR')}` } } }, scales: { y: { beginAtZero: true, ticks: { color: '#8a8a8a', font: { size: 8 }, callback: v => v >= 1000000 ? (v / 1000000).toFixed(1) + 'M' : v >= 1000 ? (v / 1000).toFixed(0) + 'K' : v }, grid: { color: 'rgba(93,93,93,0.15)' } }, x: { ticks: { color: '#8a8a8a', font: { size: 8 } }, grid: { display: false } } } },
